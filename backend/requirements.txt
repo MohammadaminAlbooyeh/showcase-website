@@ -1,0 +1,17 @@
+Django>=4.2
+ djangorestframework>=3.14
+django-cors-headers>=4.3
+gunicorn>=20.1.0
+psycopg2>=2.9  # PostgreSQL adapter for Python
+# For sending email via Gmail (uses built-in Django email backend)
+
+# Frontend build (React, Vite, etc.) dependencies are managed by npm/yarn and not pip, but for reference:
+# nodejs>=18.0.0
+# npm>=9.0.0
+# react, react-dom, react-router-dom, vite, etc. (see package.json)
+
+# If you use Pillow for image fields in Django:
+# Pillow>=10.0
+
+# If you use python-dotenv for environment variables:
+# python-dotenv>=1.0
