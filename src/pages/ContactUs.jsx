@@ -38,8 +38,8 @@ const ContactUs = () => {
       <form onSubmit={handleSubmit} style={{display:'flex',flexDirection:'column',gap:'1rem',background:'#222',padding:'1.5rem',borderRadius:'1rem'}}>
         <input name="name" value={form.name} onChange={handleChange} placeholder="Your Name" required style={{padding:'0.5rem',borderRadius:'0.5rem',border:'1px solid #444'}} />
         <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="Your Email" required style={{padding:'0.5rem',borderRadius:'0.5rem',border:'1px solid #444'}} />
-        <textarea name="message" value={form.message} onChange={handleChange} placeholder="Your Message" required rows={5} style={{padding:'0.5rem',borderRadius:'0.5rem',border:'1px solid #444'}} />
-        <button type="submit" style={{padding:'0.7rem',borderRadius:'0.5rem',background:'#ff3571',color:'#fff',border:'none',fontWeight:'bold'}}>Send</button>
+        <textarea name="message" value={form.message} onChange={handleChange} placeholder="Your Message" required rows={8} style={{padding:'1rem',borderRadius:'0.7rem',border:'1px solid #444', fontSize:'1.1rem', minHeight:'140px', resize:'vertical'}} />
+        <button type="submit" style={{padding:'1rem',borderRadius:'0.7rem',background:'#ff3571',color:'#fff',border:'none',fontWeight:'bold', fontSize:'1.1rem'}}>Send</button>
       </form>
       {status && <div style={{marginTop:'1rem'}}>{status}</div>}
       <div style={{display:'flex',gap:'2rem',marginTop:'2.5rem'}}>

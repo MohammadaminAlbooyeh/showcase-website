@@ -1,4 +1,4 @@
-.hero-section {
+ .hero-section {
   background: #23242a;
   color: #fff;
   min-height: 100vh;
@@ -7,7 +7,7 @@
   align-items: flex-start;
   justify-content: center;
   padding: 0 2rem;
-  font-family: 'Vazirmatn', 'IRANSans', 'Tahoma', sans-serif;
+  font-family: 'Tahoma', sans-serif;
 }
  .hero-section--wide {
   max-width: none;
