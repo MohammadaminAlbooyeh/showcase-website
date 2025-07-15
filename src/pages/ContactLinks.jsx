@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ContactLinks = () => (
-  <div style={{color:'#fff', padding:'2rem', maxWidth: 500, margin: '0 auto', textAlign:'center'}}>
+  <div style={{color:'#fff', padding:'2rem', maxWidth: 500}}>
     <h2>Contact Links</h2>
     <ul style={{listStyle:'none',padding:0,fontSize:'1.2rem'}}>
       <li style={{margin:'1rem 0'}}>

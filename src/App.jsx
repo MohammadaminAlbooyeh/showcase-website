@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <nav style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
+      <nav className="main-navbar">
         <Link to="/">Home</Link>
         <Link to="/portfolio">Portfolio</Link>
         <Link to="/projects">Projects</Link>

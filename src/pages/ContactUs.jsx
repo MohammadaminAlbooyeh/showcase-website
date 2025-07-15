@@ -33,7 +33,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div style={{color:'#fff', padding:'2rem', maxWidth: 500, margin: '0 auto'}}>
+    <div style={{color:'#fff', padding:'2rem', maxWidth: 500}}>
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit} style={{display:'flex',flexDirection:'column',gap:'1rem',background:'#222',padding:'1.5rem',borderRadius:'1rem'}}>
         <input name="name" value={form.name} onChange={handleChange} placeholder="Your Name" required style={{padding:'0.5rem',borderRadius:'0.5rem',border:'1px solid #444'}} />
@@ -42,7 +42,7 @@ const ContactUs = () => {
         <button type="submit" style={{padding:'0.7rem',borderRadius:'0.5rem',background:'#ff3571',color:'#fff',border:'none',fontWeight:'bold'}}>Send</button>
       </form>
       {status && <div style={{marginTop:'1rem'}}>{status}</div>}
-      <div style={{display:'flex',gap:'2rem',justifyContent:'center',marginTop:'2.5rem'}}>
+      <div style={{display:'flex',gap:'2rem',marginTop:'2.5rem'}}>
         {/* Gmail Icon (circle, modern) */}
         <span style={{cursor:'pointer'}} title="Show Gmail address" onClick={()=>navigate('/contact/links')}>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

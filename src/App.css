@@ -1,22 +1,29 @@
 /* Navigation bar styles */
-nav {
-  background: transparent;
+/* Main navbar custom styles */
+.main-navbar {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: 2.5rem;
+  position: static;
 }
-nav a {
-  color: #fff;
+.main-navbar a {
+  color: #fff !important;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   transition: color 0.2s;
 }
-nav a:hover {
+.main-navbar a:hover {
   color: #90caf9;
 }
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .logo {

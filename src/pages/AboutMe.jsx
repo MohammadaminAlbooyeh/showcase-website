@@ -14,7 +14,7 @@ const AboutMe = () => {
           a Developer.
         </h1>
         <div className="hero-desc">
-          I am an experienced software developer with approximately 3 years of background in Java development. In addition, he has over 2 years of professional experience as a backend Python developer, primarily working with Django. He has a strong understanding of backend architecture, RESTful APIs, and relational databases.
+          I am an experienced software developer with approximately 3 years of background in Java development. In addition, I have over 3 years of professional experience as a backend Python developer, primarily working with Django. I have a strong understanding of backend architecture, RESTful APIs, and relational databases.
         </div>
         <div className="hero-socials">
           <a href="#"><i className="fab fa-github"></i></a>
