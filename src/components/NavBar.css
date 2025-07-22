@@ -1,46 +1,50 @@
+/* src/components/NavBar.css */
+
 .navbar {
-  background: #23232b;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  /* Positioning the navbar at the top and making it full width */
+  position: fixed; /* Keep the navbar visible when scrolling */
+  top: 0; /* Initial position at the very top */
+  width: 100%;
+  background-color: #333; /* Example background color */
+  color: white; /* Example text color */
+  padding: 10px 0; /* Add some vertical padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow */
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
+
 .navbar-container {
-  max-width: 1100px;
-  margin: 4rem auto 0;
+  /* Using Flexbox to arrange logo and links */
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 0 2rem;
+  justify-content: space-between; /* Pushes logo to left, links to right */
+  align-items: center; /* Vertically centers items */
+  max-width: 1200px; /* Max width for content, adjust as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 20px; /* Horizontal padding inside the container */
 }
-.navbar-logo {
-  display: none;
-}
+
 .navbar-logo a {
-  color: #ffffff;
+  color: white; /* Color for the logo text */
+  text-decoration: none; /* Remove underline from link */
+  font-size: 1.5em; /* Larger font size for the logo */
   font-weight: bold;
-  font-size: 1.3rem;
-  text-decoration: none;
-  letter-spacing: 1px;
 }
+
 .navbar-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: flex-start;
+  /* This is the key part to move your links down */
+  /* If the entire navbar is too high, adjust 'padding-top' on .navbar */
+  /* If only the links section within the navbar is too high, adjust this */
+  padding-top: 30px; /* Adjust this value (e.g., 20px, 40px) to move links down */
+  display: flex; /* Make links sit next to each other */
+  gap: 20px; /* Space between the links */
 }
+
 .navbar-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.2s;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ffffff;
-  border-radius: 4px;
-  background-color: transparent;
-  width: auto;
-  display: inline-block;
-  text-align: center;
+  color: white; /* Color for navigation links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.1em; /* Font size for navigation links */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
+
 .navbar-links a:hover {
-  color: #fff;
-  background-color: #ff4081;
+  color: #ddd; /* Lighter color on hover */
 }
