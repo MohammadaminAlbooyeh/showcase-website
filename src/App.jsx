@@ -1,7 +1,9 @@
+// src/App.jsx
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AboutMe from './pages/AboutMe';
+// Removed AboutMe import as its content is now part of Home
+import Home from './pages/Home'; // Import the new Home component
 import Portfolio from './pages/Portfolio';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
@@ -17,8 +19,8 @@ function App() {
         <NavBar />
         <main className="content">
           <Routes>
-            <Route path="/" element={<AboutMe />} />
-            <Route path="/about" element={<AboutMe />} />
+            <Route path="/" element={<Home />} /> {/* Render Home component for the root path */}
+            {/* Removed the /about route as its content is now on the home page */}
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/resume" element={<Resume />} />
