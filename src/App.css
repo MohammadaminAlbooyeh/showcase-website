@@ -2,12 +2,12 @@
 
 /* General styles for the App container */
 .App {
-  font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  min-height: 100vh; /* Ensure app takes full viewport height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -15,45 +15,72 @@
 /* Styles for the main content area to prevent overlap with fixed navbar */
 .content {
   padding-top: 80px; /* Adjust this value. It should be slightly more than your navbar's height */
-  flex-grow: 1; /* Allows content to take up available space */
-  display: flex; /* Use flex to center content if needed */
+  flex-grow: 1;
+  display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align content to the top within its padded area */
+  align-items: flex-start;
   width: 100%;
 }
 
 /* Styles for the new Home page section */
 .home-section {
-  text-align: center;
-  padding: 50px 20px; /* Add some padding around the text */
-  max-width: 800px; /* Limit width for readability */
-  margin: 0 auto; /* Center the section horizontally */
+  display: flex;
+  flex-direction: column; /* Default to column for mobile first */
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 50px; /* Increased top padding to move it down */
+  max-width: 800px; /* This max-width applies to the entire image+text block */
+  margin: 0 auto;
+  gap: 120px; /* Increased gap between image and text */
+}
+
+/* Media query for larger screens to arrange side-by-side */
+@media (min-width: 768px) {
+  .home-section {
+    flex-direction: row; /* Change to row for desktop */
+    /* text-align: left; Removed as text-align is now handled by .home-text-content */
+    justify-content: center; /* Center the image and text block */
+    align-items: flex-start; /* Align items to the top of the flex container */
+  }
 }
 
 .home-section h1 {
   font-size: 2.8em;
-  color: red; /* Changed to red as requested */
+  color: rgb(216, 62, 62);
   margin-bottom: 25px;
   font-weight: 700;
 }
 
 .home-section p {
-  font-size: 1.2em;
-  line-height: 1.8;
-  color: white; /* Changed to white as requested */
+  font-size: 1.2em; /* Reverted font-size for better readability */
+  line-height: 1.8; /* Reverted line-height for better readability */
+  color: white;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 /* Styles for the profile image */
 .profile-image {
-  width: 250px; /* Adjust image size as needed */
-  height: 250px; /* Adjust image size as needed */
-  border-radius: 50%; /* This makes the image perfectly round */
-  object-fit: cover; /* Ensures the image covers the area without distortion, cropping if necessary */
-  margin-bottom: 30px; /* Space below the image */
-  border: 4px solid #007bff; /* Optional: add a border */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ee5a5a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  margin-left: 80px; /* Moves the image to the right */
+}
+
+/* Styles for the text content next to the image */
+.home-text-content {
+  flex-grow: 1;
+  max-width: 5000px; /* Increased max-width to make the text box wider */
+  padding-top: 20px;
+  text-align: center; /* Centered text for all screen sizes */
+}
+
+@media (min-width: 768px) {
+  /* Removed specific text-align: left here as it's now centered by default */
 }
 
 /* Ensure other pages also respect the navbar padding */
@@ -62,7 +89,7 @@
 .resume-page,
 .contact-us-page,
 .contact-links-page {
-  padding-top: 20px; /* Add some top padding for other pages too */
+  padding-top: 20px;
 }
 
 /* Basic styling for links and buttons */

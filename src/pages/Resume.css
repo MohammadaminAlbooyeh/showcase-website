@@ -1,0 +1,49 @@
+/* src/pages/Resume.css */
+
+.resume-page {
+  /* Ensure content starts below the fixed navbar */
+  padding-top: 100px; /* Adjust this value if your navbar height changes */
+  padding-bottom: 50px;
+  text-align: center; /* Center align all content by default */
+  max-width: 1000px; /* Max width for the page content */
+  margin: 0 auto; /* Center the page content horizontally */
+  color: #333; /* Default text color for the page */
+}
+
+.resume-page h1 {
+  font-size: 3em;
+  color: #007bff; /* Example heading color */
+  margin-bottom: 30px;
+}
+
+/* Style for the resume box */
+.resume-box {
+  background-color: #f9f9f9; /* Light background for the box */
+  border: 1px solid #ddd; /* A subtle border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 40px; /* Internal spacing */
+  margin-top: 50px; /* Space from the heading above */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  min-height: 300px; /* Minimum height for the box, adjust as needed */
+  display: flex; /* Use flexbox to center content if added later */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em; /* Example font size for placeholder text */
+  color: #888; /* Color for placeholder text */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .resume-page {
+    padding-top: 80px; /* Slightly less padding for mobile */
+  }
+
+  .resume-page h1 {
+    font-size: 2.5em;
+  }
+
+  .resume-box {
+    padding: 20px; /* Smaller padding on mobile */
+    margin-top: 30px;
+  }
+}
