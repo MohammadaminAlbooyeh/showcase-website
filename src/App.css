@@ -29,16 +29,49 @@
   align-items: center;
   justify-content: center;
   padding: 80px 20px 50px; /* Increased top padding to move it down */
-  max-width: 800px; /* This max-width applies to the entire image+text block */
-  margin: 0 auto;
+  width: 100%; /* Ensure it takes full width */
   gap: 120px; /* Increased gap between image and text */
+
+  /* --- Background Image Styles --- */
+  background-image: url('/home-bg.jpg'); /* Updated with your image URL */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  color: white; /* Ensure text is readable over background, already white */
+  position: relative; /* Needed for potential overlay */
+  overflow: hidden; /* Hide overflow if image is too large */
+  border-radius: 0; /* Removed border-radius if it's full width, or adjust as needed */
+  box-shadow: none; /* Removed box-shadow if it's full width, or adjust as needed */
+  min-height: calc(100vh - 80px); /* Ensures it takes full height minus navbar height */
+  /* --- End Background Image Styles --- */
 }
+
+/* Optional: Add an overlay for better text readability if the background image is busy */
+.home-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* Slightly lighter overlay for blur to be visible */
+  z-index: 0; /* Ensures overlay is behind content but above background image */
+  border-radius: 0; /* Match parent border-radius */
+  backdrop-filter: blur(3px); /* Added blur effect to the background behind the overlay */
+  -webkit-backdrop-filter: blur(3px); /* For Safari support */
+}
+
+/* Ensure content is above the overlay */
+.home-section > * {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* Media query for larger screens to arrange side-by-side */
 @media (min-width: 768px) {
   .home-section {
     flex-direction: row; /* Change to row for desktop */
-    /* text-align: left; Removed as text-align is now handled by .home-text-content */
     justify-content: center; /* Center the image and text block */
     align-items: flex-start; /* Align items to the top of the flex container */
   }
@@ -74,7 +107,7 @@
 /* Styles for the text content next to the image */
 .home-text-content {
   flex-grow: 1;
-  max-width: 5000px; /* Increased max-width to make the text box wider */
+  max-width: 1400px; /* Increased max-width to make the text box wider */
   padding-top: 20px;
   text-align: center; /* Centered text for all screen sizes */
 }
