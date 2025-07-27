@@ -76,6 +76,20 @@
 .project-link:hover {
   background-color: #0056b3;
 }
+.projects-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.projects-grid {
+  flex: 2;
+}
+.projects-image-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
@@ -90,4 +104,5 @@
   .projects-grid {
     grid-template-columns: 1fr; /* Stack items on small screens */
   }
+  
 }

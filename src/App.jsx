@@ -3,13 +3,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Removed AboutMe import as its content is now part of Home
-import Home from './pages/Home'; // Import the new Home component
-import Portfolio from './pages/Portfolio';
-import Projects from './pages/Projects';
-import Resume from './pages/Resume';
-import ContactUs from './pages/ContactUs';
-import ContactLinks from './pages/ContactLinks';
-import NavBar from './components/NavBar';
+import Home from './pages/Home.jsx';
+import Portfolio from './pages/Portfolio.jsx';
+import Projects from './pages/Projects.jsx';
+import Resume from './pages/Resume.jsx';
+import ContactUs from './pages/ContactUs.jsx';
+// import ContactLinks from './pages/ContactLinks.jsx';
+// import ContactMe from './pages/ContactMe.jsx';
+import NavBar from './components/NavBar.jsx';
 import './App.css';
 
 function App() {
@@ -25,7 +26,6 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<ContactUs />} />
-            <Route path="/contact/links" element={<ContactLinks />} />
           </Routes>
         </main>
       </div>
