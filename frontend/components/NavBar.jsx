@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import './NavBar.css';
 
 export default function NavBar() {
   const router = useRouter();
@@ -10,7 +11,7 @@ export default function NavBar() {
     <nav className="navbar" aria-label="Main navigation">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link href="/" className={getNavLinkClass('/')} tabIndex={0} aria-label="Home">Amin Albooyeh</Link>
+          <Link href="/" className={getNavLinkClass('/')} tabIndex={0} aria-label="Home"></Link>
         </div>
         <div className="navbar-links">
           <Link href="/" className={getNavLinkClass('/')} tabIndex={0}>Home</Link>

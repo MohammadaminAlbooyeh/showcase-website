@@ -4,7 +4,7 @@ export default function Home() {
     <div className="home-section">
       <img 
         src="/profile.jpg" 
-        alt="Amin Albooyeh Profile" 
+        alt="Profile" 
         className="profile-image" 
       />
       <div className="home-text-content">
