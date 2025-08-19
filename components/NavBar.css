@@ -1,0 +1,9 @@
+.navbar-container {
+    padding-top: 2rem; /* Moves the whole navbar content down */
+}
+
+.navbar-links {
+    margin-top: 1rem; /* Adds extra space above the buttons */
+}
+
+/* You can remove or comment out margin-top on .navbar if not needed */
