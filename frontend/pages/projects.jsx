@@ -1,5 +1,8 @@
 
 
+import * as React from 'react';
+import FolderOpenIcon from '@mui/icons-material/FolderOpen';
+
 export default function Projects() {
   const projects = [
     {
@@ -66,8 +69,55 @@ export default function Projects() {
       <div className="projects-list">
         {projects.map(project => (
           <div key={project.id} className="project-item">
-            <h2>{project.title}</h2>
-            <img src={project.image} alt={project.title} />
+            <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.5em', fontWeight: 700 }}>
+              <FolderOpenIcon sx={{ color: 'var(--color-accent)', fontSize: 32 }} />
+              {project.title}
+            </h2>
+            <div style={{
+              position: 'relative',
+              width: '180px',
+              height: '110px',
+              margin: '1rem auto',
+              borderRadius: '18px',
+              overflow: 'hidden',
+              boxShadow: '0 4px 18px 0 rgba(80,0,120,0.18)',
+              background: 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '2.5px solid #fff',
+              transition: 'transform 0.2s',
+            }}>
+              <img
+                src={project.image}
+                alt={project.title}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: 0.85,
+                  filter: 'blur(0.5px) saturate(1.1)',
+                }}
+              />
+              <span style={{
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'rgba(60,0,80,0.55)',
+                color: '#fff',
+                fontWeight: 700,
+                fontSize: '1.05rem',
+                padding: '0.3em 0.7em',
+                borderBottomLeftRadius: '16px',
+                borderBottomRightRadius: '16px',
+                textAlign: 'center',
+                letterSpacing: '0.03em',
+                textShadow: '0 2px 8px rgba(0,0,0,0.18)',
+              }}>
+                {project.title}
+              </span>
+            </div>
             <p>{project.description}</p>
             <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
               View Details
