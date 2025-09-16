@@ -37,23 +37,7 @@ export default function NavBar() {
     <AppBar position="static" color="default" elevation={2} sx={{ mb: 2, background: 'var(--color-nav-bg)' }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          {/* Logo or Brand */}
-          <Typography
-            variant="h6"
-            noWrap
-            component={Link}
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              color: 'var(--color-accent)',
-              textDecoration: 'none',
-              fontWeight: 700,
-              letterSpacing: '.1rem',
-            }}
-          >
-            Amin
-          </Typography>
+          {/* Logo or Brand removed as requested */}
 
           {/* Mobile menu icon */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -78,8 +62,17 @@ export default function NavBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.href} onClick={handleCloseNavMenu} selected={router.pathname === page.href}>
-                  <Typography component={Link} href={page.href} sx={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
+                <MenuItem
+                  key={page.href}
+                  onClick={() => {
+                    handleCloseNavMenu();
+                    if (router.pathname !== page.href) {
+                      router.push(page.href);
+                    }
+                  }}
+                  selected={router.pathname === page.href}
+                >
+                  <Typography sx={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
                     {page.label}
                   </Typography>
                 </MenuItem>
@@ -87,23 +80,7 @@ export default function NavBar() {
             </Menu>
           </Box>
 
-          {/* Desktop menu */}
-          <Typography
-            variant="h6"
-            noWrap
-            component={Link}
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              color: 'var(--color-accent)',
-              textDecoration: 'none',
-              fontWeight: 700,
-              letterSpacing: '.1rem',
-            }}
-          >
-            Amin
-          </Typography>
+          {/* Desktop menu brand removed as requested */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
             {pages.map((page) => (
               <Button

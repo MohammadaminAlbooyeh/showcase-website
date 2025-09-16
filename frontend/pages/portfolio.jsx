@@ -1,4 +1,7 @@
 
+import * as React from 'react';
+import FolderOpenIcon from '@mui/icons-material/FolderOpen';
+
 export default function Portfolio() {
   const selectedProjects = [
     {
@@ -48,7 +51,10 @@ export default function Portfolio() {
       <div className="portfolio-items-grid">
         {selectedProjects.map(project => (
           <div key={project.id} className="portfolio-item">
-            <h2>{project.title}</h2>
+            <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.5em', fontWeight: 700 }}>
+              <FolderOpenIcon sx={{ color: 'var(--color-accent)', fontSize: 32 }} />
+              {project.title}
+            </h2>
             <img src={project.image} alt={project.title} />
             <p>{project.description}</p>
             <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
