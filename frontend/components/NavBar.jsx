@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -33,13 +32,16 @@ export default function NavBar() {
     setAnchorElNav(null);
   };
 
+  // Pre-fetch all routes for instant navigation
+  React.useEffect(() => {
+    pages.forEach(page => router.prefetch(page.href));
+  }, []);
+
   return (
     <AppBar position="static" color="default" elevation={2} sx={{ mb: 2, background: 'var(--color-nav-bg)' }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          {/* Logo or Brand removed as requested */}
-
-          {/* Mobile menu icon */}
+          {/* Mobile menu */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -62,52 +64,47 @@ export default function NavBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem
-                  key={page.href}
-                  onClick={() => {
-                    handleCloseNavMenu();
-                    if (router.pathname !== page.href) {
-                      router.push(page.href);
-                    }
-                  }}
-                  selected={router.pathname === page.href}
+                <Link 
+                  key={page.href} 
+                  href={page.href} 
+                  style={{ textDecoration: 'none', color: 'inherit' }}
                 >
-                  <Typography sx={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
-                    {page.label}
-                  </Typography>
-                </MenuItem>
+                  <MenuItem onClick={handleCloseNavMenu} selected={router.pathname === page.href}>
+                    <Typography textAlign="center">{page.label}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
 
-          {/* Desktop menu brand removed as requested */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
+          {/* Desktop menu */}
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', gap: 1 }}>
             {pages.map((page) => (
-              <Button
+              <Link
                 key={page.href}
-                onClick={() => {
-                  handleCloseNavMenu();
-                  if (router.pathname !== page.href) {
-                    router.push(page.href);
-                  }
-                }}
-                sx={{
-                  my: 2,
-                  color: router.pathname === page.href ? 'var(--color-accent)' : 'var(--color-primary)',
-                  display: 'block',
-                  fontWeight: router.pathname === page.href ? 700 : 400,
-                  backgroundColor: router.pathname === page.href ? 'rgba(249,200,70,0.08)' : 'transparent',
-                  borderRadius: 2,
-                  mx: 1,
-                  transition: 'all 0.2s',
-                  '&:hover': {
-                    backgroundColor: 'var(--color-secondary)',
-                    color: 'var(--color-bg)',
-                  },
-                }}
+                href={page.href}
+                style={{ textDecoration: 'none' }}
               >
-                {page.label}
-              </Button>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    px: 2,
+                    color: router.pathname === page.href ? 'var(--color-accent)' : 'var(--color-primary)',
+                    display: 'block',
+                    fontWeight: router.pathname === page.href ? 700 : 400,
+                    backgroundColor: router.pathname === page.href ? 'rgba(249,200,70,0.08)' : 'transparent',
+                    borderRadius: 2,
+                    transition: 'all 0.2s',
+                    '&:hover': {
+                      backgroundColor: 'var(--color-secondary)',
+                      color: 'var(--color-bg)',
+                    },
+                  }}
+                >
+                  {page.label}
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>

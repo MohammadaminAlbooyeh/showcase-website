@@ -1,0 +1,186 @@
+
+
+import * as React from 'react';
+import FolderOpenIcon from '@mui/icons-materi            style=            style={{
+              position: 'relative',
+              width: '180px',
+              height: '110px',
+              margin: '1rem auto',
+              borderRadius: '18px',
+              overflow: 'hidden',
+              boxShadow: `0 8px 20px -8px ${project.color}88`,
+              background: project.color,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '2px solid rgba(255, 255, 255, 0.8)',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              transform: 'translateY(0)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.boxShadow = `0 12px 25px -5px ${project.color}aa`;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = `0 8px 20px -8px ${project.color}88`;
+            }} position: 'relative',
+              width: '180px',
+              height: '110px',
+              margin: '1rem auto',
+              borderRadius: '18px',
+              overflow: 'hidden',
+              boxShadow: `0 8px 20px -8px ${project.color}88`,
+              background: project.color,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '2px solid rgba(255, 255, 255, 0.8)',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              '&:hover': {
+                transform: 'translateY(-5px)',
+                boxShadow: `0 12px 25px -5px ${project.color}aa`,
+              },
+            }}
+export default function Projects() {
+  const projects = [
+    {
+      id: 1,
+      title: 'SnapCinema',
+      description: 'A platform for browsing and discovering movies, with detailed information and user reviews.',
+      image: 'https://placehold.co/400x250/FF6B6B/FFFFFF?text=SnapCinema',
+      link: '#',
+      color: '#FF6B6B', // Soft coral
+    },
+    {
+      id: 2,
+      title: 'SmartLibrary',
+      description: 'An application for managing library books, users, and borrowing history.',
+      image: 'https://placehold.co/400x250/4ECDC4/FFFFFF?text=SmartLibrary',
+      link: '#',
+      color: '#4ECDC4', // Medium turquoise
+    },
+    {
+      id: 3,
+      title: 'Hotel Booking App',
+      description: 'A comprehensive system for searching, booking, and managing hotel reservations.',
+      image: 'https://placehold.co/400x250/95E1D3/FFFFFF?text=Hotel+Booking',
+      link: '#',
+      color: '#95E1D3', // Soft mint
+    },
+    {
+      id: 4,
+      title: 'MyEShop',
+      description: 'An e-commerce storefront for selling various products, including shopping cart and order processing.',
+      image: 'https://placehold.co/400x250/F9C784/333333?text=MyEShop',
+      link: '#',
+      color: '#F9C784', // Warm sand
+    },
+    {
+      id: 5,
+      title: 'Income and Expenses Tracker',
+      description: 'A personal finance application to track income and expenses, with categorization and reporting features.',
+      image: 'https://placehold.co/400x250/A8E6CF/333333?text=Income+Expenses',
+      link: '#',
+      color: '#A8E6CF', // Mint green
+    },
+    {
+      id: 6,
+      title: 'Algorithm Lab',
+      description: 'A collection of implemented algorithms and data structures for educational purposes and performance testing.',
+      image: 'https://placehold.co/400x250/88D8B0/FFFFFF?text=Algorithm+Lab',
+      link: '#',
+      color: '#88D8B0', // Sea foam
+    },
+    {
+      id: 7,
+      title: 'Weather Dashboard',
+      description: 'A dynamic dashboard displaying current weather conditions and forecasts for multiple locations.',
+      image: 'https://placehold.co/400x250/6C88C4/FFFFFF?text=Weather+Dashboard',
+      link: '#',
+      color: '#6C88C4', // Dusty blue
+    },
+    {
+      id: 8,
+      title: 'To Do List',
+      description: 'A simple and intuitive application for managing daily tasks and to-do items.',
+      image: 'https://placehold.co/400x250/FFB5A7/333333?text=To+Do+List',
+      link: '#',
+      color: '#FFB5A7', // Peach
+    },
+  ];
+
+  return (
+    <div className="projects-page">
+      <h1>My Projects</h1>
+      <div className="projects-list">
+        {projects.map(project => (
+          <div key={project.id} className="project-item">
+            <div style={{
+              position: 'relative',
+              width: '180px',
+              height: '110px',
+              margin: '1rem auto',
+              borderRadius: '18px',
+              overflow: 'hidden',
+              boxShadow: `0 4px 18px 0 ${project.color}33`,
+              background: project.color,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '2.5px solid #fff',
+              transition: 'transform 0.2s',
+              cursor: 'pointer',
+            }}
+            onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: 0.85,
+                  filter: 'blur(0.5px) saturate(1.1)',
+                }}
+              />
+              <div style={{
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                bottom: 0,
+                display: 'flex',
+                flexDirection: 'column',
+                background: 'rgba(60,0,80,0.75)',
+                color: '#fff',
+                padding: '0.5em',
+                textAlign: 'center',
+              }}>
+                <span style={{
+                  fontWeight: 700,
+                  fontSize: '1.05rem',
+                  marginBottom: '0.2em',
+                  letterSpacing: '0.03em',
+                }}>
+                  {project.title}
+                </span>
+                <span style={{
+                  fontSize: '0.85rem',
+                  opacity: 0.9,
+                  fontWeight: 500,
+                }}>
+                  View Details
+                </span>
+              </div>
+            </div>
+            <p>{project.description}</p>
+          </div>
+        ))}
+      </div>
+  <img src="/dev-pic.png" alt="Developer" className="dev-pic" />
+    </div>
+  );
+}
