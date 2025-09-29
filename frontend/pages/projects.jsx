@@ -1,5 +1,5 @@
 import * as React from 'react';
-import FolderOpenIcon from '@mui/icons-material/FolderOpen';
+import AnimatedProjectIcon from '../components/AnimatedProjectIcon';
 
 export default function Projects() {
   const projects = [
@@ -78,51 +78,9 @@ export default function Projects() {
             <div
               className="project-image-container"
               onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
-              style={{
-                position: 'relative',
-                width: '180px',
-                height: '110px',
-                margin: '1rem auto',
-                borderRadius: '18px',
-                overflow: 'hidden',
-                boxShadow: `0 10px 25px -10px ${project.color}66`,
-                background: project.color,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '2px solid rgba(255, 255, 255, 0.9)',
-                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                cursor: 'pointer',
-                transform: 'translateY(0) scale(1)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-6px) scale(1.02)';
-                e.currentTarget.style.boxShadow = `0 20px 30px -12px ${project.color}88`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                e.currentTarget.style.boxShadow = `0 10px 25px -10px ${project.color}66`;
-              }}
+              style={{ margin: '1rem auto', cursor: 'pointer' }}
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  opacity: 0.92,
-                  transition: 'all 0.4s ease',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.opacity = '1';
-                  e.currentTarget.style.transform = 'scale(1.05)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.opacity = '0.92';
-                  e.currentTarget.style.transform = 'scale(1)';
-                }}
-              />
+              <AnimatedProjectIcon project={project} size="large" />
             </div>
             <h2 style={{ 
               display: 'flex', 
@@ -133,14 +91,6 @@ export default function Projects() {
               transition: 'color 0.3s ease',
               marginBottom: '0.5rem'
             }}>
-              <FolderOpenIcon sx={{ 
-                fontSize: 32,
-                transition: 'transform 0.3s ease',
-                transform: 'rotate(0deg)',
-                '&:hover': {
-                  transform: 'rotate(5deg)'
-                }
-              }} />
               {project.title}
             </h2>
             <p style={{
