@@ -2,8 +2,39 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    unoptimized: true // If you want to use <img> instead of next/image for now
-  }
-};
+    domains: ['localhost'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    formats: ['image/webp'],
+  },
+  webpack: (config, { dev, isServer }) => {
+    // Enable code splitting
+    config.optimization = {
+      ...config.optimization,
+      splitChunks: {
+        chunks: 'all',
+        minSize: 20000,
+        maxSize: 240000,
+        minChunks: 1,
+        maxAsyncRequests: 30,
+        maxInitialRequests: 30,
+        cacheGroups: {
+          defaultVendors: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            reuseExistingChunk: true,
+          },
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true,
+          },
+        },
+      },
+    };
 
-export default nextConfig;
+    return config;
+  },
+}
+
+module.exports = nextConfig

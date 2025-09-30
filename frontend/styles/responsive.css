@@ -1,0 +1,102 @@
+/* Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .MuiContainer-root {
+    padding: 1rem !important;
+  }
+  
+  /* Typography adjustments */
+  h1 {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  /* Project grid */
+  .project-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* Navigation */
+  .nav-menu {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  
+  /* Forms and inputs */
+  .form-container {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+/* Tablet (601px to 960px) */
+@media (min-width: 601px) and (max-width: 960px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .MuiContainer-root {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Laptop (961px to 1280px) */
+@media (min-width: 961px) and (max-width: 1280px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* Common responsive adjustments */
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Responsive padding utility classes */
+.p-responsive {
+  padding: clamp(1rem, 5vw, 3rem);
+}
+
+.py-responsive {
+  padding-top: clamp(1rem, 5vw, 3rem);
+  padding-bottom: clamp(1rem, 5vw, 3rem);
+}
+
+.px-responsive {
+  padding-left: clamp(1rem, 5vw, 3rem);
+  padding-right: clamp(1rem, 5vw, 3rem);
+}
+
+/* Responsive margins */
+.m-responsive {
+  margin: clamp(1rem, 5vw, 3rem);
+}
+
+.my-responsive {
+  margin-top: clamp(1rem, 5vw, 3rem);
+  margin-bottom: clamp(1rem, 5vw, 3rem);
+}
+
+.mx-responsive {
+  margin-left: clamp(1rem, 5vw, 3rem);
+  margin-right: clamp(1rem, 5vw, 3rem);
+}
+
+/* Responsive font sizes */
+.text-responsive {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.heading-responsive {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
