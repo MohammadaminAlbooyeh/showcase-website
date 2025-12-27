@@ -126,40 +126,6 @@ export default function Portfolio() {
     setFilteredProjects(filtered);
   }, [searchTerm, selectedTags, projects]);
 
-  // Get all unique tags
-  const allTags = [...new Set(selectedProjects.flatMap(project => project.tags))];
-
-  // Filter projects based on search and tags
-  useEffect(() => {
-    const filtered = selectedProjects.filter(project => {
-      const matchesSearch = !searchTerm ||
-        project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesTags = selectedTags.length === 0 ||
-        selectedTags.every(tag => project.tags.includes(tag));
-      return matchesSearch && matchesTags;
-    });
-    setFilteredProjects(filtered);
-  }, [searchTerm, selectedTags]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedTags, setSelectedTags] = useState([]);
-  const [filteredProjects, setFilteredProjects] = useState(selectedProjects);
-
-  // Get all unique tags from projects
-  const allTags = [...new Set(selectedProjects.flatMap(project => project.tags))];
-
-  // Filter projects based on search term and selected tags
-  useEffect(() => {
-    const filtered = selectedProjects.filter(project => {
-      const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesTags = selectedTags.length === 0 ||
-        selectedTags.every(tag => project.tags.includes(tag));
-      return matchesSearch && matchesTags;
-    });
-    setFilteredProjects(filtered);
-  }, [searchTerm, selectedTags]);
-
   const handleOpenDemo = (project) => {
     setSelectedProject(project);
     setDemoOpen(true);
@@ -419,6 +385,8 @@ export default function Portfolio() {
         onClose={handleCloseDemo}
         project={selectedProject}
       />
+        </Box>
+      </ScrollFadeIn>
     </Container>
     </>
   );

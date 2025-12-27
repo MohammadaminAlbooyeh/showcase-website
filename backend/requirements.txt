@@ -9,11 +9,11 @@ gunicorn==21.2.0
 whitenoise==6.5.0  # For serving static files in production
 
 # Database and Caching
-psycopg2-binary==2.9.9  # PostgreSQL adapter
+# psycopg2-binary==2.9.9  # PostgreSQL adapter (commented out due to Python 3.14 compatibility)
 django-redis==5.4.0  # For caching
 
 # Media Handling
-Pillow==10.0.1  # For image processing
+Pillow==11.0.0  # For image processing
 django-storages==1.14.2  # For handling media files in production
 
 # Blog and Code Snippets Support

@@ -394,7 +394,7 @@ export default function ContactUs() {
 								'&.Mui-focused fieldset': {
 									borderColor: errors.subject ? 'error.main' : 'var(--color-accent)',
 									borderWidth: '2px',
-									background: alpha('var(--color-accent)', 0.02)
+									background: alpha('#f9c846', 0.02)
 								}
 							},
 							'& .MuiInputLabel-root': { 

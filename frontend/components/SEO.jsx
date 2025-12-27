@@ -51,7 +51,7 @@ const SEO = ({
             '@context': 'https://schema.org',
             '@type': 'Person',
             name: 'Your Name',
-            url: url,
+            url: currentUrl,
             sameAs: [
               'https://github.com/yourusername',
               'https://linkedin.com/in/yourusername',

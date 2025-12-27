@@ -67,6 +67,7 @@ export default function Home() {
               textAlign={{ xs: 'center', md: 'left' }}
               role="region"
               aria-label="Introduction text"
+            >
               <Typography variant="h3" component="h1" color="var(--color-accent)" fontWeight={700} gutterBottom sx={{ letterSpacing: '.05em' }}>
                 Welcome!
               </Typography>

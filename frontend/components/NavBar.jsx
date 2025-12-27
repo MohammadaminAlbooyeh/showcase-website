@@ -282,52 +282,6 @@ export default function NavBar() {
                 ))}
               </List>
             </Drawer>
-                  <Link 
-                    key={page.href} 
-                    href={page.href} 
-                    style={{ textDecoration: 'none', color: 'inherit' }}
-                  >
-                    <MenuItem onClick={handleCloseNavMenu} selected={router.pathname === page.href}>
-                      <Typography textAlign="center">{page.label}</Typography>
-                    </MenuItem>
-                  </Link>
-                ))}
-              </Menu>
-            </Box>
-
-            {/* Desktop menu */}
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', gap: 1 }}>
-              {pages.map((page) => (
-                <Link
-                  key={page.href}
-                  href={page.href}
-                  style={{ textDecoration: 'none' }}
-                >
-                  <Button
-                    component={motion.button}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={handleCloseNavMenu}
-                    sx={{
-                      my: 2,
-                      px: 2,
-                      color: router.pathname === page.href ? 'var(--color-accent)' : 'var(--color-primary)',
-                      display: 'block',
-                      fontWeight: router.pathname === page.href ? 700 : 400,
-                      backgroundColor: router.pathname === page.href ? 'rgba(249,200,70,0.08)' : 'transparent',
-                      borderRadius: 2,
-                      transition: 'all 0.2s',
-                      '&:hover': {
-                        backgroundColor: 'var(--color-secondary)',
-                        color: 'var(--color-bg)',
-                      },
-                    }}
-                  >
-                    {page.label}
-                  </Button>
-                </Link>
-              ))}
-            </Box>
           </Toolbar>
         </Container>
       </AppBar>

@@ -95,10 +95,10 @@ const Timeline = () => {
             '&:hover': {
               '& .timeline-content': {
                 transform: 'scale(1.02)',
-                boxShadow: theme => \`0 8px 24px \${alpha(theme.palette.primary.main, 0.2)}\`,
+                boxShadow: (theme) => `0 8px 24px ${alpha(theme.palette.primary.main, 0.2)}`,
               },
               '& .timeline-dot': {
-                animation: \`\${pulse} 1s infinite\`,
+                animation: `${pulse} 1s infinite`,
                 background: item.color,
               }
             }
@@ -168,20 +168,27 @@ const Timeline = () => {
                 </Box>
               </Box>
             </Grid>
-            <Box
-              className="timeline-dot"
-              sx={{
-                position: 'absolute',
-                left: { xs: '20px', md: '50%' },
-                transform: { md: 'translateX(-50%)' },
-                width: 16,
-                height: 16,
-                borderRadius: '50%',
-                bgcolor: 'var(--color-primary)',
-                border: '3px solid var(--color-nav-bg)',
-                transition: 'all 0.3s ease-in-out',
-              }}
-            />
+            <Grid 
+              item 
+              xs={12} 
+              md={6}
+              sx={{ display: { xs: 'none', md: 'block' } }}
+            >
+              <Box
+                className="timeline-dot"
+                sx={{
+                  position: 'absolute',
+                  left: { xs: '20px', md: '50%' },
+                  transform: { md: 'translateX(-50%)' },
+                  width: 16,
+                  height: 16,
+                  borderRadius: '50%',
+                  bgcolor: 'var(--color-primary)',
+                  border: '3px solid var(--color-nav-bg)',
+                  transition: 'all 0.3s ease-in-out',
+                }}
+              />
+            </Grid>
           </Grid>
         </Box>
       ))}
