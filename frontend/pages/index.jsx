@@ -71,7 +71,7 @@ export default function Home() {
               <Typography variant="h3" component="h1" color="var(--color-accent)" fontWeight={700} gutterBottom sx={{ letterSpacing: '.05em' }}>
                 Welcome!
               </Typography>
-              <Typography variant="body1" color="var(--color-primary)" sx={{ fontSize: '1.2rem', mt: 2 }}>
+              <Typography variant="body1" color="white" sx={{ fontSize: '1.2rem', mt: 2 }}>
                 I am an experienced software developer with 2 years of background in Java development. In addition, I have over 3 years of professional experience as a Python developer, primarily working with Django. I have a strong understanding of backend architecture, RESTful APIs, and relational databases.
               </Typography>
             </Box>

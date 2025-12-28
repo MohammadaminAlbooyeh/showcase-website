@@ -21,7 +21,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 const pages = [
   { label: 'Home', href: '/' },
-  { label: 'Portfolio', href: '/portfolio' },
   { label: 'Projects', href: '/projects' },
   { label: 'Resume', href: '/resume' },
   { label: 'Contact', href: '/contactus' },
@@ -177,7 +176,6 @@ export default function NavBar() {
                 textAlign: { xs: 'center', md: 'left' }
               }}
             >
-              My Portfolio
             </Typography>
 
             {/* Mobile menu toggle */}
