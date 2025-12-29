@@ -149,14 +149,9 @@ export default function ContactUs() {
 				p={4} 
 				borderRadius={3} 
 				boxShadow={3} 
-				bgcolor="var(--color-nav-bg)"
+				bgcolor="#0f172a"
 				sx={{
-					transform: 'translateY(0)',
-					transition: 'all 0.3s ease-in-out',
-					'&:hover': {
-						transform: 'translateY(-5px)',
-						boxShadow: theme => `0 8px 24px ${alpha(theme.palette.primary.main, 0.2)}`
-					},
+					border: '2px solid #f59e0b',
 					position: 'relative',
 					overflow: 'hidden',
 					'&::before': {
@@ -166,7 +161,7 @@ export default function ContactUs() {
 						left: 0,
 						right: 0,
 						height: '4px',
-						background: 'linear-gradient(90deg, var(--color-accent) 0%, var(--color-primary) 100%)',
+						background: 'linear-gradient(90deg, #f59e0b 0%, #d97706 100%)',
 					}
 				}}
 			>
@@ -293,28 +288,28 @@ export default function ContactUs() {
 							mb: 2,
 							animation: `${fadeInUp} 0.6s ease-out`,
 							'& .MuiInputLabel-root': {
-								color: errors.name ? 'error.main' : 'var(--color-primary)',
+								color: errors.name ? 'error.main' : '#f59e0b',
 								transition: 'all 0.2s ease-in-out',
 							},
 							'& .MuiOutlinedInput-root': {
 								'& fieldset': { 
-									borderColor: errors.name ? 'error.main' : 'var(--color-primary)',
+									borderColor: errors.name ? 'error.main' : '#f59e0b',
 									borderWidth: '2px',
 									transition: 'all 0.3s ease-in-out',
 								},
 								'&:hover fieldset': { 
-									borderColor: errors.name ? 'error.main' : 'var(--color-accent)',
+									borderColor: errors.name ? 'error.main' : '#f59e0b',
 									animation: errors.name ? `${shake} 0.5s ease-in-out` : 'none',
 								},
 								'&.Mui-focused fieldset': {
-									borderColor: 'var(--color-accent)',
+									borderColor: '#f59e0b',
 									borderWidth: '2px'
 								}
 							},
 							'& .MuiInputLabel-root': { 
-								color: 'var(--color-primary)',
+								color: '#f59e0b',
 								'&.Mui-focused': {
-									color: 'var(--color-accent)'
+									color: '#f59e0b'
 								}
 							},
 							'& .MuiOutlinedInput-input': { 
@@ -344,21 +339,21 @@ export default function ContactUs() {
 							mb: 2,
 							'& .MuiOutlinedInput-root': {
 								'& fieldset': { 
-									borderColor: 'var(--color-primary)',
+									borderColor: '#f59e0b',
 									borderWidth: '2px'
 								},
 								'&:hover fieldset': { 
-									borderColor: 'var(--color-accent)',
+									borderColor: '#f59e0b',
 								},
 								'&.Mui-focused fieldset': {
-									borderColor: 'var(--color-accent)',
+									borderColor: '#f59e0b',
 									borderWidth: '2px'
 								}
 							},
 							'& .MuiInputLabel-root': { 
-								color: 'var(--color-primary)',
+								color: '#f59e0b',
 								'&.Mui-focused': {
-									color: 'var(--color-accent)'
+									color: '#f59e0b'
 								}
 							},
 							'& .MuiOutlinedInput-input': { 
@@ -383,25 +378,25 @@ export default function ContactUs() {
 							animation: `${fadeInUp} 0.6s ease-out 0.2s both`,
 							'& .MuiOutlinedInput-root': {
 								'& fieldset': { 
-									borderColor: errors.subject ? 'error.main' : 'var(--color-primary)',
+									borderColor: errors.subject ? 'error.main' : '#f59e0b',
 									borderWidth: '2px',
 									transition: 'all 0.3s ease-in-out',
 								},
 								'&:hover fieldset': { 
-									borderColor: errors.subject ? 'error.main' : 'var(--color-accent)',
+									borderColor: errors.subject ? 'error.main' : '#f59e0b',
 									animation: errors.subject ? `${shake} 0.5s ease-in-out` : 'none',
 								},
 								'&.Mui-focused fieldset': {
-									borderColor: errors.subject ? 'error.main' : 'var(--color-accent)',
+									borderColor: errors.subject ? 'error.main' : '#f59e0b',
 									borderWidth: '2px',
-									background: alpha('#f9c846', 0.02)
+									background: alpha('#f59e0b', 0.02)
 								}
 							},
 							'& .MuiInputLabel-root': { 
-								color: errors.subject ? 'error.main' : 'var(--color-primary)',
+								color: errors.subject ? 'error.main' : '#f59e0b',
 								transition: 'all 0.2s ease-in-out',
 								'&.Mui-focused': {
-									color: errors.subject ? 'error.main' : 'var(--color-accent)'
+									color: errors.subject ? 'error.main' : '#f59e0b'
 								}
 							},
 							'& .MuiOutlinedInput-input': { 
@@ -427,21 +422,21 @@ export default function ContactUs() {
 							mb: 2,
 							'& .MuiOutlinedInput-root': {
 								'& fieldset': { 
-									borderColor: 'var(--color-primary)',
+									borderColor: '#f59e0b',
 									borderWidth: '2px'
 								},
 								'&:hover fieldset': { 
-									borderColor: 'var(--color-accent)',
+									borderColor: '#f59e0b',
 								},
 								'&.Mui-focused fieldset': {
-									borderColor: 'var(--color-accent)',
+									borderColor: '#f59e0b',
 									borderWidth: '2px'
 								}
 							},
 							'& .MuiInputLabel-root': { 
-								color: 'var(--color-primary)',
+								color: '#f59e0b',
 								'&.Mui-focused': {
-									color: 'var(--color-accent)'
+									color: '#f59e0b'
 								}
 							},
 							'& .MuiOutlinedInput-input': { 
@@ -466,15 +461,15 @@ export default function ContactUs() {
 								px: 4,
 								fontWeight: 600,
 								fontSize: '1.1rem',
-								background: 'var(--color-accent)',
-								color: 'var(--color-bg)',
+								background: '#f59e0b',
+								color: '#000000',
 								transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
 								position: 'relative',
 								overflow: 'hidden',
 								'&:hover': {
-									background: 'var(--color-accent)',
+									background: '#f59e0b',
 									transform: 'translateY(-2px)',
-									boxShadow: theme => `0 8px 20px ${alpha(theme.palette.primary.main, 0.3)}`,
+									boxShadow: theme => `0 8px 20px ${alpha('#f59e0b', 0.3)}`,
 									'& .send-icon': {
 										animation: `${sendIconAnimation} 1s infinite ease-in-out`,
 									},
@@ -483,7 +478,7 @@ export default function ContactUs() {
 									transform: 'translateY(0)',
 								},
 								'&:disabled': {
-									background: 'var(--color-accent)',
+									background: '#f59e0b',
 									opacity: 0.7,
 								},
 								'&::after': {

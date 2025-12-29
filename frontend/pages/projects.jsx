@@ -76,9 +76,9 @@ export default function Projects() {
         My Projects
       </Typography>
       
-      <Grid container spacing={1} sx={{ maxWidth: '100%' }}>
+      <Grid container spacing={1} sx={{ maxWidth: '100%', margin: '0 auto', paddingX: 2 }}>
         {projects.map(project => (
-          <Grid item xs={12} md={4} key={project.id}>
+          <Grid item xs={12} sm={6} md={4} key={project.id}>
             <Card
               sx={{
                 height: '100%',
