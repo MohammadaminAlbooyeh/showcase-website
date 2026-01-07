@@ -34,7 +34,7 @@ export default function Projects() {
       description: 'An e-commerce storefront for selling various products, including shopping cart and order processing.',
       image: 'https://placehold.co/400x250/F6AD55/333333?text=MyEShop',
       link: '#',
-      color: '#FFD700',
+      color: '#da33bbff',
     },
     {
       id: 5,
@@ -42,7 +42,7 @@ export default function Projects() {
       description: 'A personal finance application to track income and expenses, with categorization and reporting features.',
       image: 'https://placehold.co/400x250/4FD1C5/333333?text=Income+Expenses',
       link: '#',
-      color: '#FFD700',
+      color: '#cb5353ff',
     },
     {
       id: 6,
@@ -50,7 +50,7 @@ export default function Projects() {
       description: 'A collection of implemented algorithms and data structures for educational purposes and performance testing.',
       image: 'https://placehold.co/400x250/805AD5/FFFFFF?text=Algorithm+Lab',
       link: '#',
-      color: '#FFD700',
+      color: '#4c69dfff',
     },
     {
       id: 7,
@@ -58,7 +58,7 @@ export default function Projects() {
       description: 'A dynamic dashboard displaying current weather conditions and forecasts for multiple locations.',
       image: 'https://placehold.co/400x250/4299E1/FFFFFF?text=Weather+Dashboard',
       link: '#',
-      color: '#FFD700',
+      color: '#3ccc7fff',
     },
     {
       id: 8,
@@ -66,7 +66,7 @@ export default function Projects() {
       description: 'A simple and intuitive application for managing daily tasks and to-do items.',
       image: 'https://placehold.co/400x250/FBD38D/333333?text=To+Do+List',
       link: '#',
-      color: '#FFD700',
+      color: '#d1ee12ff',
     },
   ];
 

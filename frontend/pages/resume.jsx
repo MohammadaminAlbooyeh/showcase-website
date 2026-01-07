@@ -13,13 +13,13 @@ export default function Resume() {
           href="/resume.pdf"
           target="_blank"
           sx={{
-            backgroundColor: 'var(--color-accent)',
+            backgroundColor: 'yellow',
             color: 'var(--color-bg)',
             padding: '0.8rem 2rem',
             fontSize: '1.1rem',
             fontWeight: 600,
             '&:hover': {
-              backgroundColor: '#e0b541',
+              backgroundColor: '#d7ae3eff',
             }
           }}
         >
