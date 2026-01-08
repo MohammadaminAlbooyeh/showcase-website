@@ -77,7 +77,6 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
       <Footer />
-      <FixedBottomBar />
     </ThemeProvider>
   );
 }

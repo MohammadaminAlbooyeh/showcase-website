@@ -173,9 +173,11 @@ export default function NavBar() {
                 flexGrow: { xs: 1, md: 0 },
                 fontSize: { xs: '1.25rem', sm: '1.5rem' },
                 fontWeight: 700,
-                textAlign: { xs: 'center', md: 'left' }
+                textAlign: { xs: 'center', md: 'left' },
+                color: 'white'
               }}
             >
+              Welcome to my website
             </Typography>
 
             {/* Mobile menu toggle */}
